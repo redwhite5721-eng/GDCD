@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đường đua Cần Cù – Sáng Tạo</title>
+<style>
+:root{color-scheme:light dark;--bg:#081225;--surface:#101d35;--surface2:#172746;--text:#f7fbff;--muted:#aabbd3;--accent:#57d6ff;--accent2:#8b7cff;--good:#45df9a;--bad:#ff6b81;--gold:#ffd166;--border:#294263}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#081225;color:var(--text)}
+#app{min-height:100vh;background:linear-gradient(135deg,#081225 0%,#0b1730 55%,#17133a 100%);padding:28px 18px;overflow:hidden}
+.wrap{max-width:1050px;margin:auto}.hero{text-align:center;padding:28px 10px 18px}.badge{display:inline-block;padding:7px 12px;border:1px solid #355274;border-radius:999px;color:var(--accent);background:#0e1b31;font-weight:800;font-size:13px;letter-spacing:.4px}.hero h1{font-size:clamp(34px,7vw,66px);line-height:1;margin:16px 0 10px;letter-spacing:-2px}.hero p{color:var(--muted);max-width:720px;margin:auto;font-size:17px}.panel{background:linear-gradient(180deg,#111f38ee,#0d1930ee);border:1px solid var(--border);border-radius:28px;padding:26px;box-shadow:0 20px 70px #0005;backdrop-filter:blur(10px)}
+.btn{border:0;border-radius:15px;padding:14px 20px;font-weight:900;font-size:16px;cursor:pointer;color:#06111d;background:linear-gradient(135deg,var(--accent),#9deaff);transition:.18s;box-shadow:0 8px 24px #57d6ff22}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.secondary{color:var(--text);background:#172746;border:1px solid #315078;box-shadow:none}.btn.danger{background:#311d2b;color:#ffdbe1;border:1px solid #6b3343}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.stat{background:#0b1830;border:1px solid var(--border);border-radius:18px;padding:13px}.stat small{display:block;color:var(--muted);font-weight:700}.stat strong{font-size:25px;display:block;margin-top:4px}.progress{height:9px;background:#091427;border-radius:99px;overflow:hidden;margin:15px 0 24px;border:1px solid #203652}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px;transition:.35s}
+.qmeta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-weight:800;margin-bottom:8px}.question{font-size:clamp(22px,3.2vw,32px);line-height:1.2;margin:8px 0 22px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:13px}.answer{text-align:left;padding:17px;border-radius:17px;background:#13233f;border:1px solid #2b476c;color:var(--text);cursor:pointer;font-size:16px;font-weight:750;transition:.16s}.answer:hover:not(:disabled){transform:translateY(-2px);border-color:var(--accent);background:#182d4e}.answer.correct{border-color:var(--good);background:#103a31}.answer.wrong{border-color:var(--bad);background:#421d2b}.answer:disabled{cursor:default}.explain{margin-top:18px;padding:16px;border-radius:16px;background:#0c172a;border:1px solid var(--border);color:var(--muted);line-height:1.55}.nextrow{display:flex;justify-content:flex-end;margin-top:18px}.hidden{display:none!important}
+.introgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:22px}.topic{padding:20px;border-radius:20px;background:#0c1930;border:1px solid var(--border)}.topic h3{margin:0 0 8px}.topic p{color:var(--muted);line-height:1.6;margin:0}.result{text-align:center}.scorebig{font-size:72px;font-weight:1000;line-height:1;margin:18px 0;color:var(--accent)}.rank{font-size:21px;font-weight:900}.mistakes{text-align:left;margin-top:25px}.mistake{padding:14px 0;border-top:1px solid var(--border);color:var(--muted)}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr}.answers{grid-template-columns:1fr}.panel{padding:18px;border-radius:22px}.introgrid{grid-template-columns:1fr}}
+@media(prefers-color-scheme:light){:root{--bg:#eef5ff;--surface:#fff;--surface2:#f1f6ff;--text:#102039;--muted:#5d6e86;--border:#c8d7e9}#app{background:linear-gradient(135deg,#eaf6ff,#f4efff)}.panel{background:#ffffffee}.stat,.topic,.answer{background:#f6f9ff}.answer{color:var(--text)}.explain{background:#f2f6fc}}
+</style>
+</head>
+<body><main id="app"><div class="wrap">
+<section id="home">
+  <header class="hero"><span class="badge">GDCD 8 · KẾT NỐI TRI THỨC</span><h1>Đường đua<br>Cần Cù – Sáng Tạo</h1><p>Trò chơi ôn tập Bài 3: <b>Lao động cần cù, sáng tạo</b>. Vừa chơi vừa kiểm tra kiến thức qua các tình huống gần gũi.</p></header>
+  <div class="panel">
+    <div class="introgrid">
+      <div class="topic"><h3>🎯 Mục tiêu</h3><p>Nhận biết biểu hiện của lao động cần cù, sáng tạo; hiểu ý nghĩa và biết lựa chọn cách ứng xử phù hợp trong học tập và lao động.</p></div>
+      <div class="topic"><h3>🎮 Luật chơi</h3><p>15 câu hỏi · 3 ❤️ · 15 giây/câu · đúng +100 điểm và tăng combo. Sai sẽ hiện giải thích để ôn lại kiến thức.</p></div>
+    </div>
+    <div class="actions"><button class="btn" onclick="startGame()">▶ Bắt đầu chơi</button></div>
+  </div>
+</section>
+
+<section id="game" class="hidden">
+  <div class="stats"><div class="stat"><small>ĐIỂM</small><strong id="score">0</strong></div><div class="stat"><small>❤️ MẠNG</small><strong id="lives">❤️❤️❤️</strong></div><div class="stat"><small>🔥 COMBO</small><strong id="combo">0</strong></div><div class="stat"><small>⏱️ THỜI GIAN</small><strong id="time">15</strong></div></div>
+  <div class="progress"><i id="bar" style="width:0%"></i></div>
+  <div class="panel"><div class="qmeta"><span id="qnum">Câu 1/15</span><span id="topicTag">Kiến thức</span></div><div class="question" id="question"></div><div class="answers" id="answers"></div><div id="explain" class="explain hidden"></div><div class="nextrow"><button id="next" class="btn hidden" onclick="nextQuestion()">Câu tiếp theo →</button></div></div>
+</section>
+
+<section id="result" class="hidden"><div class="panel result"><span class="badge">KẾT QUẢ</span><div class="scorebig" id="finalScore">0</div><div class="rank" id="rank"></div><p id="summary" style="color:var(--muted);font-size:17px"></p><div class="actions"><button class="btn" onclick="startGame()">↻ Chơi lại</button><button class="btn secondary" onclick="goHome()">⌂ Về trang chủ</button></div><div class="mistakes" id="mistakes"></div></div></section>
+</div></main>
+<script>
+const questions=[
+{q:'Bạn An ngày nào cũng tự giác học bài, làm bài đúng hạn và không bỏ cuộc khi gặp bài khó. Đây là biểu hiện của:',a:['Sự cần cù trong lao động','Sự ỷ lại','Làm việc đối phó','Thiếu sáng tạo'],c:0,e:'Cần cù thể hiện ở sự chăm chỉ, chịu khó, thường xuyên và kiên trì trong công việc.'},
+{q:'Bạn Bình tìm một cách giải bài toán mới, ngắn gọn hơn nhưng vẫn đúng. Hành động này thể hiện:',a:['Lười biếng','Sáng tạo','Thiếu trách nhiệm','Làm việc qua loa'],c:1,e:'Sáng tạo là luôn suy nghĩ, tìm tòi để tạo ra cách làm mới, hiệu quả hơn.'},
+{q:'Người lao động cần cù, sáng tạo thường mang lại điều gì?',a:['Hiệu quả công việc cao hơn','Không cần học hỏi nữa','Luôn làm việc một mình','Chỉ quan tâm đến thành tích'],c:0,e:'Cần cù giúp tạo nền tảng bền bỉ; sáng tạo giúp nâng cao hiệu quả và chất lượng công việc.'},
+{q:'Việc nào sau đây thể hiện vừa cần cù vừa sáng tạo trong học tập?',a:['Chép nguyên bài của bạn','Học thuộc máy móc mà không hiểu','Lập kế hoạch học tập và tìm cách ghi nhớ phù hợp','Chỉ học khi sắp kiểm tra'],c:2,e:'Biết lập kế hoạch và chủ động tìm phương pháp phù hợp là biểu hiện tích cực của cần cù, sáng tạo.'},
+{q:'Khi gặp một nhiệm vụ khó, lựa chọn phù hợp nhất là:',a:['Bỏ cuộc ngay','Chờ người khác làm hộ','Kiên trì tìm hiểu và thử các cách giải quyết phù hợp','Làm đại cho xong'],c:2,e:'Cần cù gắn với kiên trì; sáng tạo gắn với tìm tòi nhiều cách giải quyết.'},
+{q:'Điều nào KHÔNG phải là biểu hiện của lao động cần cù?',a:['Chăm chỉ','Kiên trì','Thường xuyên rèn luyện','Ngại khó, ngại khổ và dễ bỏ cuộc'],c:3,e:'Ngại khó, dễ bỏ cuộc trái với sự cần cù.'},
+{q:'Sáng tạo trong lao động cần dựa trên điều gì?',a:['Kiến thức, kỹ năng và suy nghĩ độc lập','May mắn là đủ','Làm theo người khác mọi lúc','Không cần kiểm tra kết quả'],c:0,e:'Sáng tạo cần nền tảng kiến thức, kỹ năng, sự chủ động và biết kiểm chứng hiệu quả.'},
+{q:'Bạn C nghĩ ra một cách sắp xếp sách giúp cả nhóm tìm tài liệu nhanh hơn. Đây là:',a:['Một sáng kiến có ích','Một việc làm lãng phí','Biểu hiện của ỷ lại','Hành vi thiếu trách nhiệm'],c:0,e:'Một cách làm mới giúp công việc hiệu quả hơn là biểu hiện của sáng tạo.'},
+{q:'Vì sao học sinh cần rèn luyện tính cần cù, sáng tạo?',a:['Để tránh mọi khó khăn','Để nâng cao năng lực và hiệu quả học tập, lao động','Để không phải hợp tác với ai','Để luôn đứng đầu bằng mọi giá'],c:1,e:'Rèn luyện giúp mỗi người tiến bộ, nâng cao năng lực và hiệu quả công việc.'},
+{q:'Khi một cách làm sáng tạo không đạt kết quả, nên:',a:['Bỏ luôn việc đó','Đổ lỗi cho người khác','Đánh giá nguyên nhân, rút kinh nghiệm và thử cách phù hợp hơn','Giấu kết quả'],c:2,e:'Tinh thần sáng tạo cần đi cùng trách nhiệm, biết đánh giá và rút kinh nghiệm.'},
+{q:'Hành vi nào thể hiện thái độ làm việc thiếu cần cù?',a:['Luyện tập đều đặn','Hoàn thành nhiệm vụ đúng hạn','Chỉ làm khi có người nhắc và thường xuyên trì hoãn','Tự giác học tập'],c:2,e:'Trì hoãn và phụ thuộc vào sự nhắc nhở cho thấy thiếu tính tự giác, cần cù.'},
+{q:'Trong làm việc nhóm, sáng tạo nên đi cùng:',a:['Ích kỷ','Hợp tác và tôn trọng ý kiến phù hợp','Tranh công','Không lắng nghe'],c:1,e:'Sáng tạo trong tập thể hiệu quả hơn khi biết hợp tác, trao đổi và tôn trọng đóng góp của mọi người.'},
+{q:'Một bạn luyện đàn mỗi ngày và thử nhiều cách luyện để cải thiện kỹ năng. Bạn ấy đang rèn:',a:['Chỉ sự may mắn','Cần cù và sáng tạo','Sự ỷ lại','Thói quen đối phó'],c:1,e:'Luyện tập bền bỉ thể hiện cần cù; thử phương pháp mới thể hiện sáng tạo.'},
+{q:'Câu nào phù hợp nhất với tinh thần lao động cần cù, sáng tạo?',a:['“Làm nhanh cho xong.”','“Không biết thì bỏ.”','“Kiên trì, chủ động tìm cách làm hiệu quả hơn.”','“Có người khác làm rồi.”'],c:2,e:'Tinh thần đúng là kiên trì, chủ động, tìm tòi và nâng cao hiệu quả.'},
+{q:'Cách rèn luyện tốt nhất để trở thành người cần cù, sáng tạo là:',a:['Đặt mục tiêu, lập kế hoạch, chăm chỉ thực hiện, thường xuyên cải tiến cách làm','Chỉ học lý thuyết','Chờ người khác hướng dẫn mọi việc','Làm một lần rồi thôi'],c:0,e:'Rèn luyện cần kết hợp mục tiêu, kế hoạch, sự bền bỉ và tinh thần tìm tòi cải tiến.'}
+];
+let idx=0,score=0,lives=3,combo=0,time=15,timer=null,answered=false,missed=[];
+const $=id=>document.getElementById(id);
+function startGame(){idx=0;score=0;lives=3;combo=0;missed=[];clearInterval(timer);$('home').classList.add('hidden');$('result').classList.add('hidden');$('game').classList.remove('hidden');render();}
+function render(){answered=false;const x=questions[idx];$('score').textContent=score;$('lives').textContent='❤️'.repeat(lives)+'🖤'.repeat(3-lives);$('combo').textContent=combo;$('qnum').textContent=`Câu ${idx+1}/${questions.length}`;$('bar').style.width=((idx)/questions.length*100)+'%';$('question').textContent=x.q;$('explain').classList.add('hidden');$('next').classList.add('hidden');$('answers').innerHTML='';x.a.forEach((v,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=String.fromCharCode(65+i)+'. '+v;b.onclick=()=>answer(i,b);$('answers').appendChild(b)});resetTimer();}
+function resetTimer(){clearInterval(timer);time=15;$('time').textContent=time;timer=setInterval(()=>{time--;$('time').textContent=time;if(time<=0){clearInterval(timer);if(!answered)answer(-1,null,true)}},1000)}
+function answer(choice,button,timeout=false){if(answered)return;answered=true;clearInterval(timer);const x=questions[idx];const btns=[...document.querySelectorAll('.answer')];btns.forEach((b,i)=>{b.disabled=true;if(i===x.c)b.classList.add('correct')});if(choice===x.c){if(button)button.classList.add('correct');combo++;score+=100+Math.max(0,combo-1)*25}else{if(button)button.classList.add('wrong');combo=0;lives--;missed.push({q:x.q,correct:x.a[x.c],chosen:timeout?'Hết giờ':x.a[choice]||'Không chọn'});if(lives<=0){showResult();return}}$('score').textContent=score;$('lives').textContent='❤️'.repeat(lives)+'🖤'.repeat(3-lives);$('combo').textContent=combo;$('explain').textContent=(choice===x.c?'✅ Chính xác! ':'💡 '+(timeout?'Hết giờ. ':'Chưa đúng. '))+x.e;$('explain').classList.remove('hidden');$('next').classList.remove('hidden')}
+function nextQuestion(){idx++;if(idx>=questions.length)showResult();else render()}
+function showResult(){clearInterval(timer);$('game').classList.add('hidden');$('result').classList.remove('hidden');$('finalScore').textContent=score;$('rank').textContent=score>=1400?'🏆 Bậc thầy Cần Cù & Sáng Tạo':score>=1000?'🥇 Người lao động tích cực':score>=700?'🥈 Đang tiến bộ':'🥉 Cần cố gắng thêm';$('summary').textContent=`Bạn hoàn thành ${Math.min(idx+1,questions.length)}/${questions.length} câu với ${missed.length} câu cần xem lại.`;$('mistakes').innerHTML=missed.length?'<h3>📌 Ôn lại câu sai</h3>'+missed.map((m,i)=>`<div class="mistake"><b>${i+1}. ${m.q}</b><br>Đáp án đúng: <strong>${m.correct}</strong><br>Bạn chọn: ${m.chosen}</div>`).join(''):'<h3>🎉 Tuyệt vời! Không có câu nào sai.</h3>'}
+function goHome(){clearInterval(timer);$('result').classList.add('hidden');$('game').classList.add('hidden');$('home').classList.remove('hidden')}
+</script></body></html>
